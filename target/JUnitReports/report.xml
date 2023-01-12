@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="12" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="18" time="47.138">
+<testcase classname="SkillsAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send get request to retrieve all skills data" time="18.433">
+<system-out><![CDATA[Given User sets request with authorization for Skills API...................passed
+When User sends GET request for Skills API..................................passed
+Then User should get status code "200",valid response body and json schema validated for successful Skills-GET request.passed
+]]></system-out>
+</testcase>
+<testcase classname="SkillsAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send get request to retrieve single user skills data" time="7.009">
+<system-out><![CDATA[Given User sets request with authorization for Skills API...................passed
+When User sends GET request for single Userid Skills from "getsingleskills" and 0.passed
+Then User should get status code "200",valid response body and json schema validated for successful Skills-GET request for Single User.passed
+]]></system-out>
+</testcase>
+<testcase classname="SkillsAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send post request" time="3.633">
+<failure message="1 expectation failed.&#10;Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/html; charset=utf-8&quot;. Headers are:&#10;Connection=keep-alive&#10;Server=Cowboy&#10;Date=Sun, 08 Jan 2023 20:01:36 GMT&#10;Content-Length=506&#10;Content-Type=text/html; charset=utf-8&#10;Cache-Control=no-cache, no-store&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization for Skills API...................passed
+When User sends POST request for Skills with data from "postskills" and 0...passed
+Then User should get status code "201",valid response body and json schema validated for successful Skills-POST request.passed
+Then User should get Skills database validation done........................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected header "Content-Type" was not "application/json", was "text/html; charset=utf-8". Headers are:
+Connection=keep-alive
+Server=Cowboy
+Date=Sun, 08 Jan 2023 20:01:36 GMT
+Content-Length=506
+Content-Type=text/html; charset=utf-8
+Cache-Control=no-cache, no-store
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:182)
+	at io.restassured.specification.ResponseSpecification$header$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:189)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:124)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$header(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy:184)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy)
+	at stepDefinitions.SkillsStepDefinitions.user_should_get_Skills_database_validation_done(SkillsStepDefinitions.java:206)
+	at ✽.User should get Skills database validation done(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/Skills.feature:43)
+]]></failure>
+</testcase>
+<testcase classname="SkillsAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that User can send put request to update a user skill data" time="1.865">
+<failure message="1 expectation failed.&#10;Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/html; charset=utf-8&quot;. Headers are:&#10;Connection=keep-alive&#10;Server=Cowboy&#10;Date=Sun, 08 Jan 2023 20:01:39 GMT&#10;Content-Length=506&#10;Content-Type=text/html; charset=utf-8&#10;Cache-Control=no-cache, no-store&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization for Skills API...................passed
+When User sends PUT request to modify existing record with new skills data from "putskills" and 0.passed
+Then User should get status code "201",valid response body and json schema validated for successful Skills-PUT request.passed
+Then User should get Skills database validation done........................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected header "Content-Type" was not "application/json", was "text/html; charset=utf-8". Headers are:
+Connection=keep-alive
+Server=Cowboy
+Date=Sun, 08 Jan 2023 20:01:39 GMT
+Content-Length=506
+Content-Type=text/html; charset=utf-8
+Cache-Control=no-cache, no-store
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:182)
+	at io.restassured.specification.ResponseSpecification$header$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:189)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:124)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$header(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy:184)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy)
+	at stepDefinitions.SkillsStepDefinitions.user_should_get_Skills_database_validation_done(SkillsStepDefinitions.java:206)
+	at ✽.User should get Skills database validation done(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/Skills.feature:54)
+]]></failure>
+</testcase>
+<testcase classname="SkillsAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that User can delete user skills record" time="1.444">
+<failure message="1 expectation failed.&#10;Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/html; charset=utf-8&quot;. Headers are:&#10;Connection=keep-alive&#10;Server=Cowboy&#10;Date=Sun, 08 Jan 2023 20:01:41 GMT&#10;Content-Length=506&#10;Content-Type=text/html; charset=utf-8&#10;Cache-Control=no-cache, no-store&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization for Skills API...................passed
+When User sends DELETE request to delete existing Userid skills "deleteskills" and 0.passed
+Then User should get status code "200",valid response body and json schema validated for successful Skills-DELETE request.passed
+Then User should get Skills database validation done........................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected header "Content-Type" was not "application/json", was "text/html; charset=utf-8". Headers are:
+Connection=keep-alive
+Server=Cowboy
+Date=Sun, 08 Jan 2023 20:01:41 GMT
+Content-Length=506
+Content-Type=text/html; charset=utf-8
+Cache-Control=no-cache, no-store
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:182)
+	at io.restassured.specification.ResponseSpecification$header$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:189)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:124)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$header(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy:184)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy)
+	at stepDefinitions.SkillsStepDefinitions.user_should_get_Skills_database_validation_done(SkillsStepDefinitions.java:206)
+	at ✽.User should get Skills database validation done(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/Skills.feature:65)
+]]></failure>
+</testcase>
+<testcase classname="SkillMapGETAPI-Get All Skill details using various parameters" name="Verify that user can send get request to retrieve all SkillMapGET data" time="0.285">
+<failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;503&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization for SkillMapGET API..............passed
+When User sends GET request for SkillMapGET API.............................passed
+Then User should get status code "200",valid response body and json schema validated for successful SkillMapGET-GET request.failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <503>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at stepDefinitions.SkillMapGetStepDefinitions.user_should_get_status_code_valid_response_body_and_json_schema_validated_for_successful_SkillMapGET_GET_request(SkillMapGetStepDefinitions.java:48)
+	at ✽.User should get status code "200",valid response body and json schema validated for successful SkillMapGET-GET request(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/UserSkillMapGet.feature:26)
+]]></failure>
+</testcase>
+<testcase classname="SkillMapGETAPI-Get All Skill details using various parameters" name="Verify that user can send get request to retrieve all SkillMapGET data setting UserID as parameter" time="0.777">
+<failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;503&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization for SkillMapGET API..............passed
+When User sends GET request for SkillMapGET API using User ID from "getskillMapUSERID" and 0.passed
+Then User should get status code "200",valid response body and json schema validated for successful SkillMapGET-GET request using User ID.failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <503>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at stepDefinitions.SkillMapGetStepDefinitions.user_should_get_status_code_valid_response_body_and_json_schema_validated_for_successful_SkillMapGET_GET_request_using_User_ID(SkillMapGetStepDefinitions.java:68)
+	at ✽.User should get status code "200",valid response body and json schema validated for successful SkillMapGET-GET request using User ID(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/UserSkillMapGet.feature:32)
+]]></failure>
+</testcase>
+<testcase classname="SkillMapGETAPI-Get All Skill details using various parameters" name="Verify that user can send get request to retrieve all SkillMapGET data setting SkillID as parameter" time="0.511">
+<failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;503&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization for SkillMapGET API..............passed
+When User sends GET request for SkillMapGET API using Skill ID from "getskillMapSKILLID" and 0.passed
+Then User should get status code "200",valid response body and json schema validated for successful SkillMapGET-GET request using Skill ID.failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <503>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at stepDefinitions.SkillMapGetStepDefinitions.user_should_get_status_code_valid_response_body_and_json_schema_validated_for_successful_SkillMapGET_GET_request_using_Skill_ID(SkillMapGetStepDefinitions.java:93)
+	at ✽.User should get status code "200",valid response body and json schema validated for successful SkillMapGET-GET request using Skill ID(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/UserSkillMapGet.feature:42)
+]]></failure>
+</testcase>
+<testcase classname="UserAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send get request to retrieve all user data" time="0.8">
+<system-out><![CDATA[Given User sets request with authorization..................................passed
+When User sends GET request.................................................passed
+Then User should get status code "200", valid response body and json schema validated for successful GET request.passed
+]]></system-out>
+</testcase>
+<testcase classname="UserAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send get request to retrieve single user data" time="1.224">
+<system-out><![CDATA[Given User sets request with authorization..................................passed
+When User sends GET request for single Userid data from "getsingledata" and 0.passed
+Then User should get status code "200", valid response body and json schema validated for successful single user GET request.passed
+]]></system-out>
+</testcase>
+<testcase classname="UserAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send post request" time="0.942">
+<failure message="1 expectation failed.&#10;Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/html; charset=utf-8&quot;. Headers are:&#10;Connection=keep-alive&#10;Server=Cowboy&#10;Date=Sun, 08 Jan 2023 20:01:45 GMT&#10;Content-Length=506&#10;Content-Type=text/html; charset=utf-8&#10;Cache-Control=no-cache, no-store&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization..................................passed
+When User sends POST request with data from "postdata" and 0................passed
+Then User should get status code "201", valid response body and json schema validated for successful POST request.passed
+Then User should get database validation done...............................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected header "Content-Type" was not "application/json", was "text/html; charset=utf-8". Headers are:
+Connection=keep-alive
+Server=Cowboy
+Date=Sun, 08 Jan 2023 20:01:45 GMT
+Content-Length=506
+Content-Type=text/html; charset=utf-8
+Cache-Control=no-cache, no-store
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:182)
+	at io.restassured.specification.ResponseSpecification$header$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:189)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:124)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$header(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy:184)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy)
+	at stepDefinitions.UserStepDefinitions.user_should_get_database_validation_done(UserStepDefinitions.java:267)
+	at ✽.User should get database validation done(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/Users.feature:45)
+]]></failure>
+</testcase>
+<testcase classname="UserAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that User send put request to update a user data" time="1.4">
+<failure message="1 expectation failed.&#10;Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/html; charset=utf-8&quot;. Headers are:&#10;Connection=keep-alive&#10;Server=Cowboy&#10;Date=Sun, 08 Jan 2023 20:01:47 GMT&#10;Content-Length=506&#10;Content-Type=text/html; charset=utf-8&#10;Cache-Control=no-cache, no-store&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization..................................passed
+When User sends PUT request to modify existing record with new data from "putdata" and 0.passed
+Then User should get status code "201", valid response body and json schema validated for successful PUT request.passed
+Then User should get database validation done...............................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected header "Content-Type" was not "application/json", was "text/html; charset=utf-8". Headers are:
+Connection=keep-alive
+Server=Cowboy
+Date=Sun, 08 Jan 2023 20:01:47 GMT
+Content-Length=506
+Content-Type=text/html; charset=utf-8
+Cache-Control=no-cache, no-store
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:182)
+	at io.restassured.specification.ResponseSpecification$header$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:189)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:124)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$header(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy:184)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy)
+	at stepDefinitions.UserStepDefinitions.user_should_get_database_validation_done(UserStepDefinitions.java:267)
+	at ✽.User should get database validation done(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/Users.feature:56)
+]]></failure>
+</testcase>
+<testcase classname="UserAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that User can delete user record" time="1.731">
+<failure message="1 expectation failed.&#10;Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/html; charset=utf-8&quot;. Headers are:&#10;Connection=keep-alive&#10;Server=Cowboy&#10;Date=Sun, 08 Jan 2023 20:01:48 GMT&#10;Content-Length=506&#10;Content-Type=text/html; charset=utf-8&#10;Cache-Control=no-cache, no-store&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization..................................passed
+When User sends DELETE request to delete existing Userid "deletedata" and 0.passed
+Then User should get status code "200",valid response body and json schema validated for successful DELETE request.passed
+Then User should get database validation done...............................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected header "Content-Type" was not "application/json", was "text/html; charset=utf-8". Headers are:
+Connection=keep-alive
+Server=Cowboy
+Date=Sun, 08 Jan 2023 20:01:48 GMT
+Content-Length=506
+Content-Type=text/html; charset=utf-8
+Cache-Control=no-cache, no-store
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:182)
+	at io.restassured.specification.ResponseSpecification$header$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:189)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:124)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$header(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy:184)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy)
+	at stepDefinitions.UserStepDefinitions.user_should_get_database_validation_done(UserStepDefinitions.java:267)
+	at ✽.User should get database validation done(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/Users.feature:67)
+]]></failure>
+</testcase>
+<testcase classname="SkillMapAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send get request to retrieve all SkillMap data" time="0.247">
+<system-out><![CDATA[Given User sets request with authorization for SkillMap API.................passed
+When User sends GET request for SkillMap API................................passed
+Then User should get status code "200",valid response body and json schema validated for successful SkillMap-GET request.passed
+]]></system-out>
+</testcase>
+<testcase classname="SkillMapAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send get request to retrieve single SkillMap data" time="0.839">
+<system-out><![CDATA[Given User sets request with authorization for SkillMap API.................passed
+When User sends GET request for single Userid SkillMap from "getsingleskillMap" and 0.passed
+Then User should get status code "200",valid response body and json schema validated for successful single SkillMap-GET request.passed
+]]></system-out>
+</testcase>
+<testcase classname="SkillMapAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send post request" time="0.991">
+<failure message="1 expectation failed.&#10;Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/html; charset=utf-8&quot;. Headers are:&#10;Connection=keep-alive&#10;Server=Cowboy&#10;Date=Sun, 08 Jan 2023 20:01:51 GMT&#10;Content-Length=506&#10;Content-Type=text/html; charset=utf-8&#10;Cache-Control=no-cache, no-store&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization for SkillMap API.................passed
+When User sends POST request for SkillMap with data from "postskillMap" and 0.passed
+Then User should get status code "201",valid response body and json schema validated for successful SkillMap-POST request.passed
+Then User should get SkillMap database validation done......................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected header "Content-Type" was not "application/json", was "text/html; charset=utf-8". Headers are:
+Connection=keep-alive
+Server=Cowboy
+Date=Sun, 08 Jan 2023 20:01:51 GMT
+Content-Length=506
+Content-Type=text/html; charset=utf-8
+Cache-Control=no-cache, no-store
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:182)
+	at io.restassured.specification.ResponseSpecification$header$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:189)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:124)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$header(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy:184)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy)
+	at stepDefinitions.SkillMapStepDefinitions.user_should_get_SkillMap_database_validation_done(SkillMapStepDefinitions.java:215)
+	at ✽.User should get SkillMap database validation done(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/UsersSkillMap.feature:43)
+]]></failure>
+</testcase>
+<testcase classname="SkillMapAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send put request" time="1.432">
+<failure message="1 expectation failed.&#10;Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/html; charset=utf-8&quot;. Headers are:&#10;Connection=keep-alive&#10;Server=Cowboy&#10;Date=Sun, 08 Jan 2023 20:01:52 GMT&#10;Content-Length=506&#10;Content-Type=text/html; charset=utf-8&#10;Cache-Control=no-cache, no-store&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization for SkillMap API.................passed
+When User sends PUT request to modify existing record with new skillMap data from "putskillMap" and 0.passed
+Then User should get status code "201",valid response body and json schema validated for successful SkillMap-PUT request.passed
+Then User should get SkillMap database validation done......................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected header "Content-Type" was not "application/json", was "text/html; charset=utf-8". Headers are:
+Connection=keep-alive
+Server=Cowboy
+Date=Sun, 08 Jan 2023 20:01:52 GMT
+Content-Length=506
+Content-Type=text/html; charset=utf-8
+Cache-Control=no-cache, no-store
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:182)
+	at io.restassured.specification.ResponseSpecification$header$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:189)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:124)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$header(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy:184)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy)
+	at stepDefinitions.SkillMapStepDefinitions.user_should_get_SkillMap_database_validation_done(SkillMapStepDefinitions.java:215)
+	at ✽.User should get SkillMap database validation done(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/UsersSkillMap.feature:54)
+]]></failure>
+</testcase>
+<testcase classname="SkillMapAPI-Get-All, Get-Single, Post, Put &amp; Delete" name="Verify that user can send delete request" time="1.066">
+<failure message="1 expectation failed.&#10;Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/html; charset=utf-8&quot;. Headers are:&#10;Connection=keep-alive&#10;Server=Cowboy&#10;Date=Sun, 08 Jan 2023 20:01:53 GMT&#10;Content-Length=506&#10;Content-Type=text/html; charset=utf-8&#10;Cache-Control=no-cache, no-store&#10;" type="java.lang.AssertionError"><![CDATA[Given User sets request with authorization for SkillMap API.................passed
+When User sends DELETE request to delete existing Userid skillMap "deleteskillMap" and 0.passed
+Then User should get status code "200",valid response body and json schema validated for successful SkillMap-DELETE request.passed
+Then User should get SkillMap database validation done......................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected header "Content-Type" was not "application/json", was "text/html; charset=utf-8". Headers are:
+Connection=keep-alive
+Server=Cowboy
+Date=Sun, 08 Jan 2023 20:01:53 GMT
+Content-Length=506
+Content-Type=text/html; charset=utf-8
+Cache-Control=no-cache, no-store
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:182)
+	at io.restassured.specification.ResponseSpecification$header$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:189)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:124)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$header(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy:184)
+	at io.restassured.internal.ValidatableResponseImpl.header(ValidatableResponseImpl.groovy)
+	at stepDefinitions.SkillMapStepDefinitions.user_should_get_SkillMap_database_validation_done(SkillMapStepDefinitions.java:215)
+	at ✽.User should get SkillMap database validation done(file:///C:/Users/admin/eclipse-workspace/RestAssuredBDDCucumber/src/test/resources/Features/UsersSkillMap.feature:65)
+]]></failure>
+</testcase>
+</testsuite>

@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome2Element"
+    },
+    "definitions": {
+        "Welcome2Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "skill_id": {
+                    "type": "integer"
+                },
+                "skill_name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "skill_id",
+                "skill_name"
+            ],
+            "title": "Welcome2Element"
+        }
+    }
+}
